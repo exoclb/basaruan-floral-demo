@@ -1,0 +1,161 @@
+---
+import data from '../data/wedding.json';
+const date = new Date(data.date);
+const formattedDate = date.toLocaleDateString('id-ID', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+});
+---
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>{data.groom} & {data.bride} - Wedding Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#faf5ef" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="cover">
+      <div class="floral-bg"></div>
+      <div class="content">
+        <p class="label fade-in">You're Invited To</p>
+        <h1 class="fade-in delay-1">{data.groom} <span>&</span> {data.bride}</h1>
+        <p class="date fade-in delay-2">{formattedDate}</p>
+        <a href="/home" class="btn fade-in delay-3">Buka Undangan</a>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+</script>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #faf5ef;
+  }
+
+  .cover {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #faf5ef 0%, #f8e8e8 50%, #faf5ef 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .floral-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(ellipse at 20% 20%, rgba(197, 150, 167, 0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(197, 150, 167, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(232, 213, 218, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .content {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #c796a7;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+    line-height: 1.2;
+    color: #4a3f3f;
+  }
+
+  h1 span {
+    color: #c796a7;
+  }
+
+  .date {
+    color: #8a7a7a;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #c796a7, #d4a5b5);
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(199, 150, 167, 0.3);
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(199, 150, 167, 0.4);
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.4s; }
+  .delay-3 { animation-delay: 0.6s; }
+
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 10vw, 2.5rem);
+    }
+
+    .btn {
+      padding: 0.875rem 2rem;
+      font-size: 0.8rem;
+    }
+  }
+</style>

@@ -1,0 +1,58 @@
+{
+  "theme": "floral",
+  "groom": "Ahmad Fauzi",
+  "bride": "Dewi Lestari",
+  "groomFather": "Bapak H. Hasan Fauzi",
+  "groomMother": "Ibu Hj. Siti Hasanah",
+  "brideFather": "Bapak H. Ahmad Lestari",
+  "brideMother": "Ibu Hj. Nurul Amin",
+  "date": "2026-07-20T10:00:00",
+  "venue": "Taman Wedding Pavilion",
+  "music": {
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    "title": "A Thousand Years - Christina Perri"
+  },
+  "shareText": "Kami mengundang Anda untuk hadir di pernikahan kami!",
+  "events": [
+    {
+      "name": "Akad Nikah",
+      "time": "10:00 - 12:00 WIB",
+      "location": "Masjid Al-Ikhlas",
+      "mapsUrl": "https://maps.google.com/?q=Masjid+Al-Ikhlas"
+    },
+    {
+      "name": "Resepsi",
+      "time": "18:00 - 22:00 WIB",
+      "location": "Taman Wedding Pavilion",
+      "mapsUrl": "https://maps.google.com/?q=Taman+Wedding+Pavilion"
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1519741497674-611481863552?w=600",
+    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600",
+    "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600",
+    "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600"
+  ],
+  "loveStory": [
+    {
+      "year": "2023",
+      "title": "Pertama Bertemu",
+      "description": "Di sebuah taman kota, bunga-bunga bermekaran memperkenalkan kami."
+    },
+    {
+      "year": "2024",
+      "title": "Jadian",
+      "description": "Di bawah hujan spring yang romantis, kami resmi bersama."
+    },
+    {
+      "year": "2025",
+      "title": "Melamar",
+      "description": "Dengan setangkai mawar, aku menyatakan cinta di taman yang sama."
+    },
+    {
+      "year": "2026",
+      "title": "Menikah",
+      "description": "Di hari yang indah ini, kami mulai cerita baru."
+    }
+  ]
+}
